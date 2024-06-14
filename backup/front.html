@@ -1,0 +1,28 @@
+<head>
+  <link rel="preload" href="_prism.css" as="style">
+  <link rel="stylesheet" href="_prism.css">
+</head>
+
+<div class="main language-{{Language}}" id="lang"></div>
+<div class="h1 red redleft">
+  Question
+  <span id="time"> </span>
+</div>
+
+<div class="h2 redleft wordwrap">{{Question}}</div>
+
+
+<script>
+
+  header = document.querySelector("#lang").classList.contains("language-py")
+  if (document.querySelector("#lang").classList.contains("language-py") == true) {
+    document.querySelector(".heading").innerHTML = '<div style="color: #ebcb8b;">Python</div>';
+  } else if (document.querySelector("#lang").classList.contains("language-sh") == true) {
+    document.querySelector(".heading").innerHTML = '<div style="color: #d08770">Bash</div>';
+  } else if (document.querySelector("#lang").classList.contains("language-js") == true) {
+    document.querySelector(".heading").innerHTML = '<div style="color: #bf616a">JavaScript</div>';
+  } else {
+    document.querySelector(".heading").innerHTML = '<div style="color: #bf616a">Please select a programming language in the language field!</div>';
+  }
+
+</script>

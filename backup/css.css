@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("_CascadiaCode.ttf");
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("_JosefinSans-Regular.ttf");
+}
+.card {
+  font: 20px/30px yh;
+  background-color: white;
+  text-align: left;
+}
+
+.h1 {
+  font: 22px/22px yh;
+  padding: 0.3em 0em 0.3em 0.5em;
+  font-family: "Josefin Sans", "Cascadia Code", "Consolas", Overpass,
+    "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+}
+.h2 {
+  font: 20px/30px yh;
+  padding: 0.3em 0em 0.3em 0.5em;
+  font-family: "Josefin Sans", "Cascadia Code", "Consolas", Overpass,
+    "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+}
+
+code {
+  font-family: "Josefin Sans", "Cascadia Code", "Courier New", "Consolas",
+    Overpass, "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei",
+    sans-serif;
+}
+
+.redleft {
+  border-left: 3px solid #fd2b3b;
+}
+.blueleft {
+  border-left: 3px solid #338eca;
+}
+.pinkleft {
+  border-left: 3px solid #c11cad;
+}
+.greenleft {
+  border-left: 3px solid #044c46;
+}
+.purpleleft {
+  border-left: 3px solid #811d5e;
+}
+
+.code {
+  /* background-color: #414141; */
+  font-family: "Josefin Sans", "Cascadia Code", "Consolas", Overpass,
+    "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+}
+
+.wordwrap {
+  display: block;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+pre,
+code {
+  /* background: #0c637f; */
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+  overflow-x: auto;
+  white-space: pre-wrap !important;
+  margin: 0 auto;
+}
+
+.red {
+  color: #fd2b3b;
+}
+.blue {
+  color: #0c637f;
+}
+.green {
+  color: #044c46;
+}
+.pink {
+  color: #c11cad;
+}
+.purple {
+  color: #594d9c;
+}
+
+.redimg {
+  background: url(_red-day.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.blueimg {
+  background: url(_blue-day.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pinkimg {
+  background: url(_pink-day.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.greenimg {
+  background: url(_green-day.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.purpleimg {
+  background: url(_purple-day.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hint {
+  /* color: black; */
+  color: #fff;
+}
+
+a {
+  color: #7575ff;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.chrome img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+ul,
+ol {
+  margin-top: 0em;
+}
+ul li {
+  margin-left: -0.9em;
+}
+i {
+  padding: 0 3px 0 0;
+}
+u {
+  text-decoration: none;
+  background-color: #ffff75;
+  border-bottom: 2px solid #ec6c4f;
+}
+hr {
+  height: 1px;
+  width: 100%;
+  display: block;
+  border: 0px solid #fff;
+  margin: 5px 0px 10px 0px;
+  background-color: #ccc;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#answer,
+#mindmapgraph {
+  visibility: hidden;
+}
+
+#mindmapgraph {
+  color: #fff
+  height: 50vh;
+  width: 95vw;
+}
+
+.markmap-foreign {
+  font: 16px/20px "Josefin Sans", "Cascadia Code", "Consolas", Overpass,
+    "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+}
+
+/* MAIN */
+
+.main {
+  background-color: #d8dee9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 24em;
+  /* overflow-x: auto; */
+}
+
+.nightMode .main {
+  background-color: #3b4252;
+}
+
+/* FADE IN EFFECT */
+
+.fade-in {
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

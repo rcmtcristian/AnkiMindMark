@@ -1,0 +1,12 @@
+{
+  "name": "ankimindmark",
+  "version": "1.0.0",
+  "description": "> 🚀 An anki add-on to support writing markdown and preview as mind map",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
