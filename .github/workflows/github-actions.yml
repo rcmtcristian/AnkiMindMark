@@ -1,0 +1,38 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  To-Ankiaddon:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Create ankiaddon
+        run: |
+          ls
+          cd AnkiMindMark
+          zip -r -q ../AnkiMindMark.zip ./*
+          cd ..
+          mv AnkiMindMark.zip AnkiMindMark.ankiaddon
+          ls
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: release/${{ github.run_number }}
+          release_name: Release V.${{ github.run_number }}
+          draft: false
+          prerelease: false
+
+      - name: Upload ankiaddon
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./AnkiMindMark.ankiaddon
+          asset_name: AnkiMindMark.ankiaddon
+          asset_content_type: application/gzip
